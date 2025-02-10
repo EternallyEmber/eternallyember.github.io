@@ -9,10 +9,6 @@
 	<link rel='preload' href='fonts/ArchitectsDaughter.ttf' crossorigin='anonymous' as='font' type='font/ttf' />
 	<link rel='preload' href='img/bg.avif' crossorigin='anonymous' as='image' type='image/avif'/>
 	<link rel='preload' href='img/pfp.avif' crossorigin='anonymous' as='image' type='image/avif'/>
-	<link rel='preconnect' href='https://s.magecdn.com'/>
-	<link rel='preload' href='https://s.magecdn.com/social/tc-discord.svg' crossorigin='anonymous' as='image' type='image/svg'/>
-	<link rel='preload' href='https://s.magecdn.com/social/tc-reddit.svg' crossorigin='anonymous' as='image' type='image/svg'/>
-	<link rel='preload' href='https://s.magecdn.com/social/tc-youtube.svg' crossorigin='anonymous' as='image' type='image/svg'/>
 	<link rel='preconnect' href='https://pic.onlinewebfonts.com'/>
 	<link rel='preload' href='https://pic.onlinewebfonts.com/user/icons_3775.svg' crossorigin='anonymous' as='image' type='image/svg'/>
 	<style>
@@ -47,11 +43,11 @@
 	.pfp {
 	border-radius: 50%;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	}
 	
-	.flags {
-	float: middle;
+	.queer {
+	display: inline-block;
 	}
 	
 	.socialsvg {
@@ -63,14 +59,19 @@
 	border-color: #282828
 	}
 	
-	.socials {
-	float: middle;
-	}
-	
 	.sociallydivided {
 	background-color: white;
 	color: black;
 	border-radius: 25px;
+	}
+	
+	#container {
+	align: center;
+	text-align: center;
+	}
+	
+	.inline {
+	display: inline-block;
 	}
 	
 	@media only screen and (orientation: portrait) {
@@ -87,9 +88,14 @@
     }
 	</style>
 	</head>
+	<body>
 	<br>
 	<div class="main-content">
-	<img class="pfp" src="img/pfp.avif" width="190" height="190" alt="Profile Picture containing reimu from the Touhou series." />
+	<picture>
+	<source srcset="img/pfp.jxl" type="image/jxl">
+	<source srcset="img/pfp.avif" type="image/avif">
+	<img class="pfp" src="img/pfp.jpg" width="190" height="190" alt="Profile Picture containing reimu from the Touhou series.">
+	</picture>
 	<h1>EmberKin</h1>
 	<a href="https://en.pronouns.page/@EternallyEmber">she/her/they/them/he/him</a>
 	<h2>About me</h2>
@@ -107,30 +113,42 @@
 	<p>
 	My autistic special interests are technology, Sonic the Hedgehog, Team Fortress 2 and The Touhou Project.
 	</p>
-	<div>
-	<a class="pansexuality" href="https://en.wikipedia.org/wiki/Pansexuality" aria-label="Read more about Pansexuality on WikiPedia">
-	<img class="flags" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Pansexuality_Pride_Flag.svg" height="100" width="177" alt="Pansexuality Pride Flag."/>
-	</a>
-	<a class="genderfluidity" href="https://en.wikipedia.org/wiki/Gender_fluidity" aria-label="Read more about Gender Fluidity on WikiPedia">
-	<img class="flags" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Genderfluidity_Pride-Flag.svg" height="100" width="177" alt="Genderfluidity Pride Flag."/>
-	</a>
+	<div class="pride" id="container">
+	<span class="inline">
+	<form action="https://en.wikipedia.org/wiki/Pansexuality" aria-label="Read more about Pansexuality on WikiPedia">
+	<input type=image class="panflag" src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Pansexuality_Pride_Flag.svg" height="100" width="177" alt="Pansexuality Pride Flag.">
+	</form>
+	</span>
+	<span class="inline">
+	<form action="https://en.wikipedia.org/wiki/Gender_fluidity" aria-label="Read more about Gender Fluidity on WikiPedia">
+	<input type=image class="fluidflag" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Genderfluidity_Pride-Flag.svg" height="100" width="177" alt="Genderfluidity Pride Flag.">
+	</form>
+	</span>
 	</div>
 	<div>
 	</div>
-	<div class="sociallydivided">
+	<div class="sociallydivided" id="container">
 	<h2>My Socials</h2>
-	<a class="socials" href="https://discord.com/users/707903072529154068" aria-label="Go to my Discord profile">
-	<img class="socialsvg" src="https://s.magecdn.com/social/tc-discord.svg" width="70" height="70" alt="The Discord Logo."/>
-	</a>
-	<a class="socials" href="https://reddit.com/u/Yaktoma2007" aria-label="Go to my Reddit profile">
-	<img class="socialsvg" src="https://s.magecdn.com/social/tc-reddit.svg" width="70" height="70" alt="The Reddit Logo"/>
-	</a>
-	<a class="socials" href="https://steamcommunity.com/id/EmberKin/" aria-label="Go to my Steam profile">
-	<img class="socialsvg" src="https://pic.onlinewebfonts.com/user/icons_3775.svg" width="70" height="70" alt="The Steam Logo"/>
-	</a>
-	<a class="socials" href="https://www.youtube.com/@EternallyEmberKin" aria-label="Go to my youTube Channel">
-	<img class="socialsvg" src="https://s.magecdn.com/social/tc-youtube.svg" width="70" height="70" alt="The Youtube Logo"/>
-	</a>
+		<span class="inline">
+	<form action="https://discord.com/users/707903072529154068" aria-label="Go to my Discord profile">
+	<input type=image class="socialsvg" src="https://raw.githubusercontent.com/gauravghongde/social-icons/refs/heads/master/SVG/Black/Discord_black.svg" width="70" height="70" alt="The Discord Logo.">
+	</form>
+	</span>
+	<span class="inline">
+	<form class="socials" action="https://reddit.com/u/Yaktoma2007" aria-label="Go to my Reddit profile">
+	<input type=image class="socialsvg" src="https://raw.githubusercontent.com/gauravghongde/social-icons/refs/heads/master/SVG/Black/Reddit_black.svg" width="70" height="70" alt="The Reddit Logo">
+	</form>
+	</span>
+	<span class="inline">
+	<form class="socials" action="https://steamcommunity.com/id/EmberKin/" aria-label="Go to my Steam profile">
+	<input type=image class="socialsvg" src="https://raw.githubusercontent.com/gauravghongde/social-icons/refs/heads/master/SVG/Black/Steam_black.svg" width="70" height="70" alt="The Steam Logo">
+	</form>
+	</span>
+	<span class="inline">
+	<form class="socials" action="https://www.youtube.com/@EternallyEmberKin" aria-label="Go to my youTube Channel">
+	<input type=image class="socialsvg" src="https://raw.githubusercontent.com/gauravghongde/social-icons/refs/heads/master/SVG/Black/Youtube_black.svg" width="70" height="70" alt="The Youtube Logo">
+	</span>
+	</form>
 	</div>
 	</div>
 	</body>
